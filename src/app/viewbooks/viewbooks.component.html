@@ -1,0 +1,25 @@
+<div class="col s7">
+    <table class="responsive-table highlight">
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>ISBN</th>
+                <!-- <th>Author Name</th> -->
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let emp of myviewdatas">
+            <td>{{emp.title}}</td>
+            <td>{{emp.isbn}}</td>
+            <!-- <td >{{emp.author.firstname}}</td> -->
+            <td>
+                <a class="action-btn" (click)="onEdit(emp.id)">
+                    <i class="material-icons">edit</i>
+                </a>
+                <a class="action-btn" (click)="onDelete(emp._id,employeeForm)">
+                    <i class="material-icons">delete</i>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
